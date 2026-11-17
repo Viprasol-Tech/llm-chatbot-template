@@ -76,7 +76,7 @@ from llm_chatbot_template.providers import FakeLLM
 bot = Chatbot(FakeLLM(), system_prompt="You are concise.", max_tokens=128)
 
 # Blocking reply:
-print(bot.send("Hello!"))               # -> "Echo: you said 'Hello!'"
+print(bot.send("Hello!"))  # -> "Echo: you said 'Hello!'"
 
 # Streamed reply (token-by-token):
 for chunk in bot.send_stream("And again?"):
